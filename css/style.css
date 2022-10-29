@@ -19,18 +19,23 @@ a{
 }
 
 .header{
-  display: flex;
-  justify-content:space-between;
   background-color:#424A57;
+  padding: 50px 0;
 }
+.header__container{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
 .logo-link{
   align-self: center;
   margin-left: 100px;
 }
 .navigation{
   margin-right: 100px;
-  margin-top:50px;
-  margin-bottom: 50px;
+  /* margin-top:50px;
+  margin-bottom: 50px; */
 }
 
 .nav-bar{
@@ -45,16 +50,25 @@ a{
 
 .nav-bar-item>a{
   margin-left:32px;
+  margin-right: 0;
 }
 
 .nav-bar-item:first-child{
   margin:0;
 }
 
+.nav-bar-item>a:hover{
+  color:#0096A7;
+  transition: 0.5s;
+}
+
+.hero{
+  background: rgba(246, 248, 251, 0.9);
+}
+
 .app-dev{
   display: flex;
-  padding: 100px;
-  background: rgba(246, 248, 251, 0.9)
+  padding: 100px 100px 44px 100px ;
 }
 
 .dev-info{
@@ -90,15 +104,46 @@ a{
   cursor: pointer;
 }
 
-.features{
-  display: flex;
-  margin:85px 100px;
+.cta:hover{
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.hero__dots{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
+.hero__dot{
+  height: 24px;
+  width: 24px;;
+  margin:0 8px;
+  border: 4px solid #0096A7;
+  border-radius:50%;
+  transition:background-color 0.15s;
+  cursor: pointer;
+}
+.hero__dot:hover,
+.hero__dot.active{
+  background-color:#0096A7;
+}
+
+
+
+.features__container{
+  display: grid;
+  padding:85px 100px;
+  grid-template-columns: repeat(auto-fit,400px);
+  column-gap:20px;
+  row-gap:20px;
 }
 
 .features-item{
   display: flex;
-  margin-right: 20px;
+ 
 }
+
 .features-item:last-child{
  margin-right: 0;
 }
@@ -106,6 +151,7 @@ a{
 .feature-content{
   margin-left:16px;
 }
+
 .feature-title{
   margin:0;
   font-family:'Montserrat-Bold',sans-serif;
@@ -113,6 +159,7 @@ a{
   font-size: 24px;
   line-height: 44px;
 }
+
 .feature-text {
   margin:0;
   font-size: 18px;
@@ -123,9 +170,11 @@ a{
   align-self:flex-start;
 }
 
-.benefits{
-  margin:0 100px 85px;
+.benefits_container{
+ 
+  padding:0 100px 85px;
 }
+
 .benefits-title{
   font-size: 48px;
   line-height: 60px;
@@ -141,7 +190,7 @@ a{
   list-style: none;
   grid-template-columns: repeat(auto-fit,400px);
   column-gap: 20px;
-  row-gap: 37;
+  row-gap: 37px;
 }
 .card-title{
   font-size: 24px;
@@ -162,11 +211,14 @@ a{
 }
 
 .footer{
-  background: #000;
   background: rgba(66, 74, 87, 0.5);
+  padding:47px 0;
+}
+
+.footer__container{
   display: flex;
   justify-content: space-between;
-  padding:47px 100px;
+ 
 }
 
 .copyright{
@@ -208,4 +260,123 @@ a{
   background-image: url(../img/instagram.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width:1280px) {
+  .app-dev{
+    display: block;
+    text-align: center;
+    padding:50px 50px 22px 50px;
+  }
+
+  .hero__image{
+   width: 70%;
+  }
+
+  .dev-info{
+    margin: 0;
+    margin-top: 27px;
+  }
+  .dev-info-title{
+    text-align: center;
+    font-size: 32px;
+    line-height: 26px;
+  }
+
+  .dev-info-text {
+    text-align: center;
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .cta{
+   margin-left: auto;
+    margin-right: auto;
+  }
+  .features__container{
+    display: block;
+    padding:50px 30px;
+  }
+  .features-item{
+    margin-top:20px;
+    text-align: center;
+  }
+  .check-mark {
+    display: none;
+   }
+   .card-list{
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    column-gap:150px;
+   }
+   .benefits_container{
+    padding:50px;
+   }
+   .benefits-title{
+    text-align: center;
+   }
+   .copyright {
+    margin-left:40px;
+   }
+   .social-club{
+    margin-right: 40px;
+   }
+}
+
+@media (max-width:960px) {
+  .benefits_container {
+    display: block;
+    text-align: center;
+  }
+  
+  .benefits-title{
+    font-size: 32px;
+    line-height: 26px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    line-height: 44px;
+  }
+
+  .card-text{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .card-image{
+    max-width: 70%;
+  }   
+ 
+  .header__container{
+    justify-content: space-around;
+  }
+}
+
+@media (max-width:768px) {
+
+  .benefits_container{
+    padding: 0 0 44px;
+  }
+  .card-list{
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+
+  .navigation{
+    display: none;
+  }
+  .logo-link{
+    margin:0 auto;
+  }
+  .header{
+    padding: 30px;
+  }
+
+}
+
+@media (max-width:480px){
+  .copyright{
+    display: none;
+  }
+
+  .footer__container{
+  justify-content:center ;
+  }
 }

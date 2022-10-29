@@ -9,24 +9,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
 </head>
 <body>
-  <header class="header container">
-    <a href="" class="logo-link">
+  <header class="header">
+    <div class="header__container container ">
+   
+    <a href="#" class="logo-link">
       <img class="logo" src="./img/logo.svg" alt="logo">
     </a>
     <div class="navigation">
       <ul class="nav-bar">
-        <li class="nav-bar-item"><a href="#">Домой</a></li>
-        <li class="nav-bar-item"><a href="#">Особенности</a></li>
-        <li class="nav-bar-item"><a href="#">Преимущества</a></li>
+        <li class="nav-bar-item"><a href="#hero" class="nav-link">Домой</a></li>
+        <li class="nav-bar-item"><a href="#features" class="nav-link">Особенности</a></li>
+        <li class="nav-bar-item"><a href="#benefits" class="nav-link">Преимущества</a></li>
       </ul>
     </div>
+    </div>
+   
   </header>
   <!-- /header -->
-  <main class="main container">
-    <div class="app-dev">
-      <img src="./img/dev.jpg" alt="dev-logo">
+  <main class="main ">
+    <section class="hero "id="hero">
+      <div class="hero__container container">
+    <div class="app-dev ">
+      <img src="./img/hero0.jpg" alt="dev-logo" class="hero__image">
       <div class="dev-info">
         <h2 class="dev-info-title">Разработано 2000+ приложений</h2>
         <p class="dev-info-text">
@@ -36,8 +43,16 @@
         <button class="cta">Присоединяйтесь</button>
       </div>
     </div>
-    <!-- /app-dev -->
-    <div class="features">
+      <div class="hero__dots">
+        <span class="hero__dot active"></span>
+        <span class="hero__dot"></span>
+        <span class="hero__dot"></span>
+      </div>
+    </div>
+    </section>
+    <!-- /hero -->
+    <section class="features" id="features">
+    <div class="features__container container">
       <div class="features-item">
         <img class="check-mark" src="./img/check.svg" alt="checkmark">
         <span class="feature-content">
@@ -50,14 +65,13 @@
         </span>
       </div>
       <!-- 1st-block -->
-      <div class="features-item">
+      <div class="features-item ">
         <img class="check-mark" src="./img/check.svg" alt="checkmark">
         <span class="feature-content">
-          <h3 class="feature-title">Для бизнеса</h3>
+          <h3 class="feature-title">Для колл-центров</h3>
           <p class="feature-text">
-            Создаем кастомизированные программы и сервисы
-            для развития управленческих команд в российских и
-            международных компаниях
+            Помогаем руководителям и командам колл-центров создать полный цикл по поддержке клиентов и
+            организовать контроль качества
           </p>
         </span>
       </div>
@@ -65,22 +79,25 @@
       <div class="features-item">
         <img class="check-mark" src="./img/check.svg" alt="checkmark">
         <span class="feature-content">
-          <h3 class="feature-title">Для бизнеса</h3>
+          <h3 class="feature-title">Облачные хранилища</h3>
           <p class="feature-text">
-            Создаем кастомизированные программы и сервисы
-            для развития управленческих команд в российских и
-            международных компаниях
+            Разрабатываем локальные защищенные
+            корпоративные хранилища, а также осуществляем
+            поддержку на протяжении всего времени
+            пользования
           </p>
         </span>
       </div>
       <!-- 3st-block -->
     </div>
+    </section>
     <!-- /features -->
-    <div class="benefits">
+    <section class="benefits" id="benefits">
+    <div class="benefits_container container">
       <h2 class="benefits-title">Преимущества</h2>
       <ul class="card-list">
         <li class="card">
-          <img src="./img/call-center.jpg" alt="call-center">
+          <img class="card-image" src="./img/call-center.jpg" alt="call-center">
           <h3 class="card-title">Поддержка 24/7</h3>
           <p class="card-text">
             Вы можете положиться на нашу круглосуточную
@@ -89,7 +106,7 @@
         </li>
         <!-- 1card -->
         <li class="card">
-          <img src="./img/refund.png" alt="refund">
+          <img class="card-image" src="./img/refund.png" alt="refund">
           <h3 class="card-title">Гарантия возврата</h3>
           <p class="card-text">
             Если вам не понравится сервис, мы вернем вам
@@ -98,20 +115,22 @@
         </li>
           <!-- 2card -->
         <li class="card">
-          <img src="./img/comfort.jpg" alt="comfort">
+          <img class="card-image" src="./img/comfort.jpg" alt="comfort">
           <h3 class="card-title">Удобство и простота</h3>
-          <p class="card-text">
+          <span class="card-text">
             Все наши сервисы и приложения интуитивно понятны
             для пользователей всех уровней
-          </p>
+          </span>
         </li>
           <!-- 3card -->
       </ul>
     </div>
+    </section>
     <!-- /benefits -->
   </main>
   <!-- /main -->
-  <footer class="footer container">
+  <footer class="footer ">
+    <div class="footer__container container">
     <p class="copyright">
       2000-2022 © System
     </p>
@@ -126,6 +145,8 @@
         <!-- <img src="./img/instagram.svg" alt="instagram"> -->
       </a>
     </div>
+    </div>
   </footer>
+  <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
